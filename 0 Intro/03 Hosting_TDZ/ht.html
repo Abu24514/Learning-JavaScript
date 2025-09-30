@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoisting in JavaScript</title>
+</head>
+<body>
+  <script>
+    // ==================== Hoisting ====================
+    // Hoisting = JavaScript ka default behavior hai
+    //            jisme variable aur function declarations
+    //            apne scope ke top par "move" ho jate hain.
+    //
+    // Variable ke 2 parts hote hain:
+    // 1. Declaration   → (var a;)
+    // 2. Initialization → (a = 15;)
+    //
+    // Note: Only declaration hoist hota hai, initialization nahi.
+
+    // ------------------- Example with var -------------------
+    console.log(a); // ✅ undefined (declaration hoist ho gaya, value abhi assign nahi hui)
+    var a = 15;     // Declaration already top par gaya tha, ab yaha value assign hui
+    console.log(a); // ✅ 15
+
+    // Internally JS aise treat karta hai:
+    // var a;              // declaration top par
+    // console.log(a);     // undefined
+    // a = 15;             // initialization
+    // console.log(a);     // 15
+
+
+    // ------------------- Example with let -------------------
+    // Temporal Dead Zone (TDZ):
+    // Jab tak "let" ya "const" variable officially declare nahi hota,
+    // uske block ke start se leke declaration line tak ka area TDZ kehlata hai.
+    // TDZ me us variable ko access karne ki koshish karne par ReferenceError aata hai.
+    try {
+      console.log(b); // ❌ ReferenceError (TDZ ke andar access)
+    } catch (err) {
+      console.error("Error with let:", err.message);
+    }
+    let b = 20;  // Ab declaration + initialization dono ek sath
+    console.log(b); // ✅ 20
+
+
+    // ------------------- Example with const -------------------
+    try {
+      console.log(c); // ❌ ReferenceError (TDZ me hai)
+    } catch (err) {
+      console.error("Error with const:", err.message);
+    }
+    const c = 30; // const ko declare karte hi value dena compulsory hai
+    console.log(c); // ✅ 30
+
+
+    // ------------------- TDZ ko aur samajhne ka tarika -------------------
+    // Ek block ke andar agar let/const declare hua hai,
+    // toh us block ke start se leke declaration line tak TDZ hoti hai.
+    {
+      try {
+        console.log(x); // ❌ ReferenceError (TDZ abhi chal raha hai)
+      } catch (err) {
+        console.error("TDZ Example:", err.message);
+      }
+      let x = 50;  // TDZ yaha khatam
+      console.log(x); // ✅ 50
+    }
+
+    // ==================== Summary ====================
+    // var   → Hoisted, initialize hota hai "undefined" ke sath
+    // let   → Hoist hota hai, but initialize nahi hota → TDZ until declaration line
+    // const → Hoist hota hai, initialize nahi hota + declare karte hi value dena zaroori
+    //
+    // TDZ = Block ke start se lekar declaration line tak ka wo period
+    //       jisme let/const variable access karna illegal hai.
+  </script>
+</body>
+</html>

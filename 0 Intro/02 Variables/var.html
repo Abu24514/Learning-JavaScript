@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Variables</title>
+</head>
+<body>
+  <script>
+    // ================= VARIABLES IN JAVASCRIPT =================
+    // A variable is a container used to store data.
+    // We can declare variables in three ways: var, let, and const.
+
+    // -----------------------------------------------------------
+    // 1. var → (Old way, ES5) | Function-scoped
+    // -----------------------------------------------------------
+    var age = 21; 
+    var age = 22; // ✅ Redeclaration allowed
+    console.log("var example:", age);
+
+    // Key Points about var:
+    // - Function-scoped (accessible only inside a function if declared there)
+    // - Added to the global 'window' object in browsers
+    // - Can be redeclared
+    // - Can be reassigned
+
+
+    // -----------------------------------------------------------
+    // 2. let → (Modern way, ES6) | Block-scoped
+    // -----------------------------------------------------------
+    let score = 50;
+    score = 60; // ✅ Reassignment allowed
+    // let score = 70; // ❌ Redeclaration not allowed in same block
+    console.log("let example:", score);
+
+    // Key Points about let:
+    // - Block-scoped (only works inside { } where it is defined)
+    // - Cannot be redeclared in the same scope
+    // - Can be reassigned
+    // - Safer and most commonly used for changing values
+
+
+    // -----------------------------------------------------------
+    // 3. const → Constant | Block-scoped
+    // -----------------------------------------------------------
+    const PI = 3.1416;
+    // PI = 3.15; // ❌ Reassignment not allowed
+    console.log("const primitive example:", PI);
+
+    // Key Points about const:
+    // - Block-scoped like let
+    // - Must be assigned at the time of declaration
+    // - Cannot be reassigned
+    // - BUT: If it holds an object/array, their contents can still be modified
+
+    // Example: const with Object
+    const user = {
+      name: "Sonu",
+      age: 21
+    };
+    user.age = 22;        // ✅ property value changed
+    user.city = "Delhi";  // ✅ new property added
+    console.log("const object example:", user);
+
+    // Example: const with Array
+    const numbers = [1, 2, 3];
+    numbers.push(4);    // ✅ add new element
+    numbers[0] = 99;    // ✅ update existing element
+    console.log("const array example:", numbers);
+
+    // Important: With const, the reference (address) is fixed,
+    // but the data inside objects/arrays can still be changed.
+  </script>
+</body>
+</html>
+    
