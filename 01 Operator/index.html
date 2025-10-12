@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ============================== ⚙️ OPERATORS IN JAVASCRIPT ⚙️ ==============================
+
+      // 📘 Definition:
+      // Operators are special symbols or keywords that perform operations on values (operands)
+      // and produce a result.
+      //
+      // Example: In `3 + 5`, `+` is an operator, and `3` & `5` are operands.
+      //
+      // JavaScript operators are grouped into several categories based on their functionality.
+
+      // ===========================================================================================
+      // 1️⃣ ARITHMETIC OPERATORS → Used to perform basic mathematical operations.
+      // ===========================================================================================
+
+      let a = 10;
+      let b = 3;
+
+      console.log("Addition:", a + b); // ➕  Addition → 13
+      console.log("Subtraction:", a - b); // ➖  Subtraction → 7
+      console.log("Multiplication:", a * b); // ✖️  Multiplication → 30
+      console.log("Division:", a / b); // ➗  Division → 3.333...
+      console.log("Modulus:", a % b); // 🔢  Modulus (remainder) → 1
+      console.log("Exponentiation:", a ** b); // 🔼  Power → 10³ = 1000
+      console.log("Increment:", ++a); // 🔺  Pre-increment → 11
+      console.log("Decrement:", --b); // 🔻  Pre-decrement → 2
+
+      // ===========================================================================================
+      // 2️⃣ ASSIGNMENT OPERATORS → Used to assign values to variables.
+      // ===========================================================================================
+
+      let x = 10;
+
+      x += 5; // same as x = x + 5
+      x -= 2; // same as x = x - 2
+      x *= 3; // same as x = x * 3
+      x /= 2; // same as x = x / 2
+      x %= 3; // same as x = x % 3
+
+      console.log("Final value of x:", x);
+
+      // ===========================================================================================
+      // 3️⃣ COMPARISON OPERATORS → Used to compare two values and return true or false.
+      // ===========================================================================================
+
+      let p = 10;
+      let q = "10";
+
+      console.log("Equal (==):", p == q); // true → compares value only
+      console.log("Strict Equal (===):", p === q); // false → compares value + type
+      console.log("Not Equal (!=):", p != q); // false
+      console.log("Strict Not Equal (!==):", p !== q); // true
+      console.log("Greater than:", p > 5); // true
+      console.log("Less than:", p < 5); // false
+      console.log("Greater or equal:", p >= 10); // true
+      console.log("Less or equal:", p <= 5); // false
+
+      // -------------------------------------------------------------------------------------------
+      // ⚙️ TYPE COERCION (Automatic Type Conversion)
+      // -------------------------------------------------------------------------------------------
+      //
+      // JavaScript automatically converts values from one data type to another when needed.
+      // This is called Type Coercion.
+      //
+      // Example:
+      console.log(5 + "5"); // "55" → number converted to string
+      console.log("10" - 2); // 8 → string converted to number
+      console.log("5" * "2"); // 10 → both strings converted to numbers
+      console.log(1 == "1"); // true → value compared after coercion
+      console.log(1 === "1"); // false → strict check (no coercion)
+      //
+      // 💡 Tip: Always use === (strict equality) to avoid unexpected results!
+
+      // ===========================================================================================
+      // 4️⃣ LOGICAL OPERATORS → Used to combine or invert boolean values.
+      // ===========================================================================================
+
+      let isAdult = true;
+      let hasID = false;
+
+      console.log("AND (&&):", isAdult && hasID); // false → both must be true
+      console.log("OR (||):", isAdult || hasID); // true → one true is enough
+      console.log("NOT (!):", !isAdult); // false → reverses the boolean
+
+      // -------------------------------------------------------------------------------------------
+      // 💡 TRUTHY & FALSY VALUES
+      // -------------------------------------------------------------------------------------------
+      //
+      // In JavaScript, every value is either Truthy or Falsy when converted to Boolean.
+      //
+      // ❌ Falsy Values (only 7):
+      // false, 0, -0, "", null, undefined, NaN
+      //
+      // ✅ Everything else is Truthy:
+      //
+      // Examples:
+      console.log(Boolean("Hello")); // true
+      console.log(Boolean("")); // false
+      console.log(Boolean(0)); // false
+      console.log(Boolean([])); // true
+      console.log(Boolean({})); // true
+      console.log(Boolean(null)); // false
+      //
+      // Example in condition:
+      let username = "";
+      if (username) {
+        console.log("Welcome!");
+      } else {
+        console.log("Please enter your name."); // runs because "" is falsy
+      }
+
+      // ===========================================================================================
+      // 5️⃣ STRING OPERATORS → Used to join (concatenate) strings.
+      // ===========================================================================================
+
+      let firstName = "Rahul";
+      let lastName = "Kumar";
+
+      console.log("Full Name:", firstName + " " + lastName); // Rahul Kumar
+
+      // Using += for concatenation
+      let sentence = "Hello";
+      sentence += " World!";
+      console.log(sentence); // "Hello World!"
+
+      // ===========================================================================================
+      // 6️⃣ TERNARY OPERATOR → Short form of if...else condition.
+      // ===========================================================================================
+
+      let age = 20;
+      let canVote = age >= 18 ? "Yes, can vote ✅" : "No, too young ❌";
+
+      console.log("Can Vote:", canVote);
+
+      // ===========================================================================================
+      // 7️⃣ TYPE OPERATORS → Used to check or convert data types.
+      // ===========================================================================================
+
+      let value = "Hello";
+
+      console.log("Typeof:", typeof value); // string
+      console.log("Instanceof:", value instanceof String); // false (primitive string)
+
+      // ===========================================================================================
+      // 8️⃣ BITWISE OPERATORS → Work on bits (0s and 1s). Rarely used in basic JS.
+      // ===========================================================================================
+
+      let num1 = 5; // 0101
+      let num2 = 3; // 0011
+
+      console.log("AND (&):", num1 & num2); // 0001 → 1
+      console.log("OR (|):", num1 | num2); // 0111 → 7
+      console.log("XOR (^):", num1 ^ num2); // 0110 → 6
+      console.log("NOT (~):", ~num1); // Inverts bits → -6
+      console.log("Left Shift (<<):", num1 << 1); // 1010 → 10
+      console.log("Right Shift (>>):", num1 >> 1); // 0010 → 2
+
+      // ===========================================================================================
+      // 🧩 SUMMARY:
+      // ✅ Arithmetic → +, -, *, /, %, **, ++, --
+      // ✅ Assignment → =, +=, -=, *=, /=, %=
+      // ✅ Comparison → ==, ===, !=, !==, >, <, >=, <=
+      // ✅ Logical → &&, ||, !
+      // ✅ String → +, +=
+      // ✅ Ternary → condition ? trueValue : falseValue
+      // ✅ Type → typeof, instanceof
+      // ✅ Bitwise → &, |, ^, ~, <<, >>
+      // ✅ Coercion → automatic type conversion (e.g. "5" + 1 → "51")
+      // ✅ Truthy/Falsy → defines how values behave in boolean context
+      // ===========================================================================================
+    </script>
+  </body>
+</html>
