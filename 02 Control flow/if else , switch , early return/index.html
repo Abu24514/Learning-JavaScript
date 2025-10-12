@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ============================== 🧭 CONTROL FLOW IN JAVASCRIPT 🧭 ==============================
+
+      // 📘 Definition:
+      // Control Flow determines the order in which statements are executed in a program.
+      // JavaScript executes code from top to bottom — but using control flow statements,
+      // we can make decisions or skip parts of code based on conditions.
+
+      // Common Control Flow Statements:
+      // ✅ if, else if, else
+      // ✅ switch
+      // ✅ early return (used inside functions to exit early)
+
+      // ===========================================================================================
+      // 1️⃣ IF STATEMENT → Used to execute code only when a condition is true.
+      // ===========================================================================================
+
+      let age = 18;
+
+      if (age >= 18) {
+        console.log("You are eligible to vote 🗳️");
+      }
+
+      // Output → "You are eligible to vote 🗳️"
+
+      // ===========================================================================================
+      // 2️⃣ IF...ELSE STATEMENT → Runs one block if condition is true, otherwise another.
+      // ===========================================================================================
+
+      let isRaining = false;
+
+      if (isRaining) {
+        console.log("Take an umbrella ☔");
+      } else {
+        console.log("Enjoy the sunshine 🌤️");
+      }
+
+      // Output → "Enjoy the sunshine 🌤️"
+
+      // ===========================================================================================
+      // 3️⃣ IF...ELSE IF...ELSE CHAIN → Used for multiple conditions.
+      // ===========================================================================================
+
+      let marks = 82;
+
+      if (marks >= 90) {
+        console.log("Grade: A+ 🏆");
+      } else if (marks >= 75) {
+        console.log("Grade: A 👏");
+      } else if (marks >= 50) {
+        console.log("Grade: B 🙂");
+      } else {
+        console.log("Grade: Fail ❌");
+      }
+
+      // Output → "Grade: A 👏"
+
+      // ===========================================================================================
+      // 4️⃣ SWITCH STATEMENT → Used to compare a single value against multiple possible matches.
+      // ===========================================================================================
+      //
+      // 🔹 Works like multiple if-else but cleaner when checking one variable against many cases.
+
+      let day = "Tuesday";
+
+      switch (day) {
+        case "Monday":
+          console.log("Start of the week 💪");
+          break;
+        case "Tuesday":
+          console.log("Keep going 🚀");
+          break;
+        case "Wednesday":
+          console.log("Halfway there ⛰️");
+          break;
+        case "Thursday":
+          console.log("Almost done 😎");
+          break;
+        case "Friday":
+          console.log("Weekend incoming 🎉");
+          break;
+        default:
+          console.log("It’s the weekend! 💤");
+      }
+
+      // Output → "Keep going 🚀"
+
+      // ===========================================================================================
+      // 5️⃣ EARLY RETURN PATTERN → Used in functions to exit early if a condition fails.
+      // ===========================================================================================
+      //
+      // 🔹 A clean code technique.
+      // 🔹 Helps avoid deeply nested if-else blocks by returning early when a condition is not met.
+
+      function getVal(val) {
+        if (val < 25) return "D";
+        else if (val < 50) return "C";
+        else if (val < 75) return "B";
+        else return "A";
+      }
+
+      console.log(getVal(76)); // Output: A
+
+      // Another example with user login:
+      function login(user) {
+        if (!user) {
+          console.log("❌ No user provided!");
+          return;
+        }
+
+        if (!user.isLoggedIn) {
+          console.log("🔒 Please log in first!");
+          return;
+        }
+
+        console.log(`✅ Welcome, ${user.name}!`);
+      }
+
+      login(null); // ❌ No user provided!
+      login({ isLoggedIn: false }); // 🔒 Please log in first!
+      login({ isLoggedIn: true, name: "Rahul" }); // ✅ Welcome, Rahul!
+
+      // ===========================================================================================
+      // 🧩 SUMMARY:
+      // ✅ if → Runs a block when condition is true.
+      // ✅ if...else → Chooses between two alternatives.
+      // ✅ else if → Checks multiple conditions in sequence.
+      // ✅ switch → Compares one value against multiple cases.
+      // ✅ early return → Exits function early for cleaner logic.
+      // ===========================================================================================
+    </script>
+  </body>
+</html>
