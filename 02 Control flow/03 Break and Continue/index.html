@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Break & Continue</title>
+  </head>
+  <body>
+    <script>
+      // ===================================================================
+      //                  JavaScript: break and continue
+      // ===================================================================
+
+      // 🔹 The `break` statement
+      // ------------------------
+      // The `break` keyword is used to immediately stop a loop,
+      // even if its condition is still true.
+      // Once `break` runs, control exits the loop entirely.
+
+      // 🧩 Example: break
+      console.log("Break keyword example:");
+
+      for (let i = 1; i <= 10; i++) {
+        if (i === 5) {
+          break; // stops the loop when i becomes 5
+        }
+        console.log(i);
+      }
+
+      // Output:
+      // 1
+      // 2
+      // 3
+      // 4
+      // (loop stops here — 5 to 10 are not printed)
+
+      // ===================================================================
+      // 🔹 The `continue` statement
+      // ---------------------------
+      // The `continue` keyword skips the current iteration of a loop
+      // and moves to the next one.
+      // The loop does not stop completely; it just skips one turn.
+
+      // 🧩 Example: continue
+      console.log("Continue keyword example:");
+
+      for (let i = 1; i <= 10; i++) {
+        if (i === 4) {
+          continue; // skips printing when i is 4
+        }
+        console.log(i);
+      }
+
+      // Output:
+      // 1
+      // 2
+      // 3
+      // 5
+      // 6
+      // 7
+      // 8
+      // 9
+      // 10
+      // (number 4 is skipped)
+
+      // ===================================================================
+      // 🔹 Summary
+      // ===================================================================
+      // 1. `break` → exits the loop completely.
+      // 2. `continue` → skips the current iteration, continues looping.
+      //
+      // ✅ Use `break` when you want to stop early.
+      // ✅ Use `continue` when you want to ignore certain cases but keep looping.
+    </script>
+  </body>
+</html>
