@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // **Q4. \[Nested if]**
+      // Take age and gender input from the user.
+      // If age is 18 or above **and** gender is `"male"`, print `"You are eligible for army"`.
+      // Otherwise, print `"Not eligible"`.
+      let age = Number(prompt("Enter your age"));
+      let gender = prompt("Enter your gender");
+      if (age >= 18) {
+        if (gender.toLocaleLowerCase() == "male") {
+          console.log("You are eligible for army");
+        } else {
+          console.log("Not eligible");
+        }
+      } else {
+         console.log("Not eligible");
+      }
+    </script>
+  </body>
+</html>
