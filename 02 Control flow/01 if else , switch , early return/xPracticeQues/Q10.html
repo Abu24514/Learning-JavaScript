@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Detector</title>
+  </head>
+  <body>
+    <script>
+      // **Q10. [switch with string]**
+      // Take browser name input from the user (e.g., "chrome", "firefox", "edge").
+      // Based on the input, print a message:
+
+      // * "brave" → "You are using Brave"
+      // * "chrome" → "You are using Chrome"
+      // * "firefox" → "You are using Firefox"
+      // * "edge" → "You are using Edge"
+      // * default → "Unknown browser"
+      
+      let browserName = prompt("Enter the browser name:");
+      
+      if (browserName) {
+        switch (browserName.toLowerCase()) {
+          case "brave":
+            console.log("You are using Brave");
+            break;
+          case "chrome":
+            console.log("You are using Chrome");
+            break;
+          case "firefox":
+            console.log("You are using Firefox");
+            break;
+          case "edge":
+            console.log("You are using Edge");
+            break;
+          default:
+            console.log("Unknown browser");
+        }
+      } else {
+        console.log("No browser name entered");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greatest Number Finder</title>
+  </head>
+  <body>
+    <script>
+      // **Q9. [Nested if + comparison]**
+      // Take three numbers as input from the user.
+      // Print the **greatest** of the three numbers.
+
+      let a = Number(prompt("Enter a:"));
+      let b = Number(prompt("Enter b:"));
+      let c = Number(prompt("Enter c:"));
+
+      if (isNaN(a) || isNaN(b) || isNaN(c)) {
+        console.log("Please enter valid numbers");
+      } else {
+        if (a >= b) {
+          if (a >= c) {
+            console.log(`a is greatest: ${a}`);
+          } else {
+            console.log(`c is greatest: ${c}`);
+          }
+        } else {
+          if (b >= c) {
+            console.log(`b is greatest: ${b}`);
+          } else {
+            console.log(`c is greatest: ${c}`);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

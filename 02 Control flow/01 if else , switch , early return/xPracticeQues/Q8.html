@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vowel Checker</title>
+  </head>
+  <body>
+    <script>
+      // **Q8. [Logical OR]**
+      // Take a single character input from the user.
+      // If it is a vowel (a, e, i, o, or u), print "It's a vowel";
+      // otherwise, print "Not a vowel".
+      
+      let char = prompt("Enter a character:");
+      
+      if (!char) {
+        console.log("No character entered");
+      } else {
+        let charLow = char.toLowerCase();
+        
+        if (
+          charLow === "a" ||
+          charLow === "e" ||
+          charLow === "i" ||
+          charLow === "o" ||
+          charLow === "u"
+        ) {
+          console.log("It's a vowel");
+        } else {
+          console.log("Not a vowel");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positive Number Checker</title>
+  </head>
+  <body>
+    <script>
+      // **Q7. [Logical AND]**
+      // Take two numbers as input.
+      // If both numbers are positive, print "Both are positive";
+      // otherwise, print "At least one is not positive".
+      
+      let num1 = Number(prompt("Enter number 1:"));
+      let num2 = Number(prompt("Enter number 2:"));
+      
+      if (isNaN(num1) || isNaN(num2)) {
+        console.log("Invalid input. Please enter valid numbers.");
+      } else if (num1 > 0 && num2 > 0) {
+        console.log("Both are positive");
+      } else {
+        console.log("At least one is not positive");
+      }
+    </script>
+  </body>
+</html>
