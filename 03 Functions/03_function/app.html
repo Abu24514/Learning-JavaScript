@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Class Function</title>
+  </head>
+  <body>
+    <script>
+      // ======================================================================
+      //                     First-Class Function
+      // ======================================================================
+      //
+      // Definition:
+      // In JavaScript, functions are called First-Class Functions
+      // because they can be used like normal values.
+      //
+      // This means a function can:
+      // 1. Be stored in a variable
+      // 2. Be passed as an argument to another function
+      // 3. Be returned from a function
+      //
+      // ======================================================================
+      // Example 1: Function stored in a variable
+      // ----------------------------------------------------------------------
+
+      const greet = function () {
+        console.log("Hello");
+      };
+
+      greet();
+
+      // ======================================================================
+      // Example 2: Function passed as an argument
+      // ----------------------------------------------------------------------
+
+      function execute(fn) {
+        fn();
+      }
+
+      execute(function () {
+        console.log("Function passed as argument");
+      });
+
+      // ======================================================================
+      // Example 3: Function returned from another function
+      // ----------------------------------------------------------------------
+
+      function createMessage() {
+        return function () {
+          console.log("Function returned from another function");
+        };
+      }
+
+      const message = createMessage();
+      message();
+
+      // ======================================================================
+      // Key Points
+      // ----------------------------------------------------------------------
+      // 1. Functions behave like values in JavaScript
+      // 2. This feature is called First-Class Function
+      // 3. It allows callbacks and higher-order functions
+      //
+      // ======================================================================
+      // Summary
+      // ----------------------------------------------------------------------
+      // If a function can be stored, passed, and returned,
+      // it is called a First-Class Function.
+      //
+      // ======================================================================
+    </script>
+  </body>
+</html>
