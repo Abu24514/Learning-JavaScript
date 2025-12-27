@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hof</title>
+  </head>
+  <body>
+    <script>
+      // ======================================================================
+      //                    Higher-Order Function (HOF)
+      // ======================================================================
+      //
+      // Definition:
+      // A Higher-Order Function is a function that
+      // - takes another function as an argument, OR
+      // - returns a function
+      //
+      // In simple words:
+      // A function that works with other functions is called
+      // a Higher-Order Function.
+      //
+      // ======================================================================
+      // Why Higher-Order Functions Are Used
+      // ----------------------------------------------------------------------
+      // 1. To reuse code
+      // 2. To keep logic separate and clean
+      // 3. To make programs more flexible
+      // 4. To avoid repeating the same code
+      //
+      // ======================================================================
+      // Example 1: Function as an Argument
+      // ----------------------------------------------------------------------
+      // Here, the function `abc` receives another function as a parameter.
+      // Because it takes a function as an argument,
+      // `abc` is a Higher-Order Function.
+      //
+
+      function abc(callback) {
+        callback();
+      }
+
+      // Passing a function as an argument
+      abc(function () {
+        console.log("Hello from callback");
+      });
+
+      // ======================================================================
+      // Example 2: Function Returning Another Function
+      // ----------------------------------------------------------------------
+      // Here, the function `m` returns a new function.
+      // Because it returns a function,
+      // `m` is also a Higher-Order Function.
+      //
+
+      function m() {
+        return function () {
+          console.log("Hello from returned function");
+        };
+      }
+
+      // Calling the returned function
+      m()();
+
+      // ======================================================================
+      // Key Points to Remember
+      // ----------------------------------------------------------------------
+      // 1. Functions in JavaScript can be treated like values
+      // 2. A Higher-Order Function uses other functions
+      // 3. It can take a function or return a function
+      // 4. Callback functions are often used with HOFs
+      //
+      // ======================================================================
+      // Summary
+      // ----------------------------------------------------------------------
+      // If a function takes another function or returns a function,
+      // it is called a Higher-Order Function.
+      //
+      // ======================================================================
+    </script>
+  </body>
+</html>
