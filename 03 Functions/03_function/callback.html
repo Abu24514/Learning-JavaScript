@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call_Back Function</title>
+  </head>
+  <body>
+    <script>
+      // ======================================================================
+      //                        Callback Function
+      // ======================================================================
+      //
+      // Definition:
+      // A Callback Function is a function that is passed as an argument
+      // to another function and is executed later.
+      //
+      // In simple words:
+      // A function that is given to another function to be called later
+      // is called a Callback Function.
+      //
+      // ======================================================================
+      // Why Callback Functions Are Used
+      // ----------------------------------------------------------------------
+      // 1. To run code after a task is finished
+      // 2. To control the order of execution
+      // 3. To write flexible and reusable code
+      //
+
+      // ======================================================================
+      // Example 1: Callback with Anonymous Function
+      // ----------------------------------------------------------------------
+
+      function runTask(callback) {
+        callback();
+      }
+
+      runTask(function () {
+        console.log("Task completed");
+      });
+
+      // ======================================================================
+      // Example 2: Callback in setTimeout
+      // ----------------------------------------------------------------------
+      // The function runs after a delay
+
+      setTimeout(function () {
+        console.log("This message appears after 2 seconds");
+      }, 2000);
+
+      // ======================================================================
+      // Key Points
+      // ----------------------------------------------------------------------
+      // 1. Callback is a normal function
+      // 2. It is passed as an argument
+      // 3. It runs later, not immediately
+      // 4. Very common in asynchronous JavaScript
+      //
+      // ======================================================================
+      // Summary
+      // ----------------------------------------------------------------------
+      // A callback function is a function passed to another function
+      // to be executed later.
+      //
+      // ======================================================================
+    </script>
+  </body>
+</html>
