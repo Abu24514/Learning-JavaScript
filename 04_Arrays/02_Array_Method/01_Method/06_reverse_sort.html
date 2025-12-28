@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reverse and sort</title>
+  </head>
+  <body>
+    <script>
+      // ===============================
+      // 11. reverse()
+      // ===============================
+      // reverse() reverses the array
+      let numbers = [10, 20, 30, 40];
+      numbers.reverse();
+
+      console.log(numbers); // [40, 30, 20, 10]
+
+      // ===============================
+      // 12. sort()
+      // ===============================
+      // sort() sorts array values
+      // By alphabetically
+
+      let arr = [40, 10, 100, 20, 15, 25, 38];
+      let arrange = arr.sort(function (a,b) {
+        return a - b; //asseding order || 
+        // return b-a ; // b-a ----> decending order
+      });
+      console.log(arrange);
+      
+    </script>
+  </body>
+</html>
