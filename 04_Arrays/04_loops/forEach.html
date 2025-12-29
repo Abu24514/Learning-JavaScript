@@ -1,0 +1,135 @@
+/*
+==========================================================
+📘 JavaScript forEach() Loop
+==========================================================
+
+📖 What is forEach()?
+forEach() is an array method used to run a function on 
+each element of an array, one by one.
+
+It is mainly used when you want to:
+- read array values
+- perform an action (print, update UI, etc.)
+- not create a new array
+
+==========================================================
+*/
+
+// ==========================================================
+// Example: Print each fruit
+// ==========================================================
+
+let fruits = ["apple", "banana", "mango", "orange"];
+
+fruits.forEach(function (fruit) {
+  console.log(fruit);
+});
+
+/*
+Output:
+apple
+banana
+mango
+orange
+*/
+
+
+// ==========================================================
+// Why do we use forEach()?
+// ==========================================================
+/*
+1. Code is short and clean.
+2. No need to manage index manually.
+3. Best when you only want to loop and do something.
+4. Very readable for beginners.
+
+Use forEach when:
+- you just want to loop
+- you don’t want to return a value
+*/
+
+
+// ==========================================================
+// How forEach() works internally
+// ==========================================================
+/*
+Array = ["apple", "banana", "mango"]
+
+Step 1 → fruit = "apple"
+Step 2 → fruit = "banana"
+Step 3 → fruit = "mango"
+
+Function runs once for each item.
+*/
+
+
+// ==========================================================
+// Difference between forEach and other loops
+// ==========================================================
+
+/*
+🔹 for loop
+----------------------------------
+- Old and traditional
+- Full control (break, continue allowed)
+- Little longer syntax
+
+Example:
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+
+
+🔹 for...of loop
+----------------------------------
+- Simple loop for arrays
+- break and continue allowed
+
+Example:
+for (let fruit of fruits) {
+  console.log(fruit);
+}
+
+
+🔹 forEach()
+----------------------------------
+- Only works on arrays
+- Cannot use break or continue
+- Cannot return values
+- Best for simple iteration
+
+Example:
+fruits.forEach(fruit => console.log(fruit));
+*/
+
+
+// ==========================================================
+// Important limitations of forEach()
+// ==========================================================
+/*
+❌ You cannot use break
+❌ You cannot use continue
+❌ You cannot return a new array
+
+If you want:
+- new array → use map()
+- filtered array → use filter()
+- single value → use reduce()
+*/
+
+
+// ==========================================================
+// Summary
+// ==========================================================
+/*
+✔ forEach is used to loop through arrays
+✔ It runs a function on every element
+✔ It does NOT return anything
+✔ Best for printing, logging, UI updates
+
+Real-life use:
+- Showing list items
+- Console logging data
+- Updating DOM elements
+==========================================================
+*/

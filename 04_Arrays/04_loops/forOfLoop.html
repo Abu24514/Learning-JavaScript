@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      /*
+  ==========================================================
+  📘 JavaScript for...of Loop
+  ==========================================================
+  
+  📖 What is for...of?
+  for...of is a loop used to iterate over
+  iterable values like arrays, strings, etc.
+  
+  It gives direct access to values (not index).
+  ==========================================================
+  */
+
+      // ==========================================================
+      // Example: Print all fruits
+      // ==========================================================
+      let fruits = ["apple", "banana", "mango", "orange"];
+
+      for (let fruit of fruits) {
+        console.log(fruit);
+      }
+      /*
+  Output:
+  apple
+  banana
+  mango
+  orange
+  */
+
+      // ==========================================================
+      // Why use for...of?
+      // ==========================================================
+      /*
+  ✔ Very simple syntax
+  ✔ Cleaner than for loop
+  ✔ Direct access to values
+  ✔ break and continue are allowed
+  
+  Use for...of when:
+  - you want control (break / continue)
+  - you only care about values
+  */
+
+      // ==========================================================
+      // for...of vs other loops
+      // ==========================================================
+      /*
+  🔹 for loop
+  ----------------------------------
+  - Index based
+  - More control
+  - Longer syntax
+  
+  🔹 forEach()
+  ----------------------------------
+  - No break / continue
+  - Only for arrays
+  - Callback based
+  
+  🔹 for...of
+  ----------------------------------
+  - Clean and readable
+  - break / continue allowed
+  - Works with arrays and strings
+  */
+
+      // ==========================================================
+      // Example with break
+      // ==========================================================
+      for (let fruit of fruits) {
+        if (fruit === "mango") {
+          break;
+        }
+        console.log(fruit);
+      }
+
+      /*
+  Output:
+  apple
+  banana
+  */
+
+      // ==========================================================
+      // Summary
+      // ==========================================================
+      /*
+  ✔ for...of is modern and clean
+  ✔ Better than forEach when control is needed
+  ✔ Best for readable loops with logic
+  ==========================================================
+  */
+    </script>
+  </body>
+</html>
