@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for_in_loop</title>
+  </head>
+
+  <body>
+    <script>
+      /*
+==========================================================
+ for...in Loop
+==========================================================
+
+📖 What is for...in loop?
+The for...in loop is used to loop through
+the PROPERTIES (keys) of an object.
+
+It gives you the key one by one.
+Mostly used with objects, not arrays.
+
+==========================================================
+*/
+
+      // ==========================================================
+      // Example 1: for...in with Object
+      // ==========================================================
+
+      let user = {
+        name: "Sonu",
+        age: 21,
+        city: "Delhi",
+      };
+
+      for (let key in user) {
+        console.log(key, ":", user[key]);
+      }
+
+      /*
+        Output:
+        name : Sonu
+        age : 21
+        city : Delhi
+        */
+
+      // ==========================================================
+      // How for...in works (simple)
+      // ==========================================================
+      /*
+        Step 1 → key = "name"
+        Step 2 → key = "age"
+        Step 3 → key = "city"
+        
+        Each time:
+        - key holds property name
+        - user[key] gives value
+        */
+
+      // ==========================================================
+      // Why do we use for...in?
+      // ==========================================================
+      /*
+        ✔ Best way to loop through object properties
+        ✔ Easy to read and write
+        ✔ No need to know property names beforehand
+        ✔ Useful when object structure is dynamic
+        */
+
+      // ==========================================================
+      // Example 2: Access only values using for...in
+      // ==========================================================
+
+      for (let key in user) {
+        console.log(user[key]);
+      }
+
+      /*
+        Output:
+        Sonu
+        21
+        Delhi
+        */
+
+      // ==========================================================
+      // Difference: for...in vs other loops
+      // ==========================================================
+
+      /*
+        🔹 for loop
+        ----------------------------------
+        - Works with arrays
+        - Full control (break, continue)
+        - Uses index
+        
+        🔹 for...of
+        ----------------------------------
+        - Works with arrays & strings
+        - Gives values directly
+        - Clean and modern
+        
+        🔹 for...in
+        ----------------------------------
+        - Best for objects
+        - Gives keys (property names)
+        - Not recommended for arrays
+        */
+
+      // ==========================================================
+      // When to use for...in?
+      // ==========================================================
+      /*
+        ✔ When looping through objects
+        ✔ When you need keys and values
+        ✔ When object structure is unknown
+        */
+
+      // ==========================================================
+      // 🧠 Summary
+      // ==========================================================
+      /*
+        ✔ for...in is mainly for objects
+        ✔ It loops through keys
+        ✔ Use user[key] to get value
+        ✔ Avoid using it with arrays
+        
+        Real-life use:
+        - Looping through user details
+        - Reading API response objects
+        - Dynamic object data handling
+        ==========================================================
+        */
+    </script>
+  </body>
+</html>
