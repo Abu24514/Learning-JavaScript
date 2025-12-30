@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optional_chaining</title>
+  </head>
+  <body>
+    <script>
+      // ==========================================================
+      // 5️⃣ Optional Chaining (?.)
+      // ==========================================================
+
+      /*
+Used to safely access values
+If property does not exist → no error
+*/
+      const user = {
+        name: "Ramesh",
+        address: {
+          city: "Bhopal",
+          pin: 462001,
+          location: {
+            lat: 23.2,
+            lng: 77.4,
+          },
+        },
+      };
+
+      console.log(user?.address?.city); // Bhopal
+      console.log(user?.contact?.phone); // undefined (no error)
+    </script>
+  </body>
+</html>
