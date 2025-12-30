@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ==========================================================
+// 4️⃣ Nested Objects (Object inside Object)
+// ==========================================================
+
+const user = {
+  name: "Ajay",
+  address: {
+    city: "Bhopal",
+    pin: 462001,
+    location: {
+      lat: 23.2,
+      lng: 77.4
+    }
+  }
+};
+
+console.log(user.address.city); // Bhopal
+console.log(user.address.location.lat); // 23.2
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+  Dot notation:
+  - used when key name is fixed
+  - easy and clean
+  
+  Bracket notation:
+  - used when key is dynamic
+  - required when key has space
+  */
+        let student = {
+            name: "Ravi",
+            age: 21,
+            isEnrolled: true
+        };
+
+        let keyName = "age";
+        console.log(student[keyName]); // 21
+    </script>
+</body>
+
+</html>

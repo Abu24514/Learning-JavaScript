@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object</title>
+</head>
+
+<body>
+    <script>
+        /*
+  ==========================================================
+   ------------- JavaScript Objects---------------- 
+  ==========================================================
+  
+  An object is used to store related data together
+  in key-value pairs.
+  
+  👉 When you have:
+  - many values of same type → use Array
+  - many different values of one entity → use Object
+  
+  Real life example:
+  student, user, product, address, profile
+  ==========================================================
+  */
+        // ==========================================================
+        // 1️⃣ Creating an Object
+        // ==========================================================
+
+        let student = {
+            name: "Ravi",
+            age: 21,
+            isEnrolled: true
+        };
+        console.log(student);
+        /*
+        Object structure:
+        key : value
+
+        Keys are always strings
+        Values can be anything:
+        string, number, boolean, array, object, function
+        
+        */
+        // ==========================================================
+        // 2️⃣ Accessing Object Values
+        // ==========================================================
+
+        // Dot notation (fixed keys)
+        console.log(student.name); // Ravi
+        console.log(student.age);  // 21
+
+        // Bracket notation (dynamic keys)
+        console.log(student["name"]); // Ravi
+
+
+    </script>
+</body>
+
+</html>
