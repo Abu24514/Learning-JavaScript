@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Clonet</title>
+</head>
+
+<body>
+    <script>
+        // ==========================================================
+        // 🔟 Deep Clone (JSON method)
+        // ==========================================================
+
+        /*
+        Creates completely independent copy
+        ❌ Date, function, undefined, RegExp not copied
+        */
+
+        let original = {
+            name: "Abu",
+            age: 20,
+            address: { city: "Muradpur" }
+        };
+
+        let deepCopy = JSON.parse(JSON.stringify(original));
+
+        deepCopy.address.city = "Delhi";
+
+        console.log(original.address.city); // Muradpur
+        console.log(deepCopy.address.city); // Delhi
+
+    </script>
+</body>
+
+</html>
