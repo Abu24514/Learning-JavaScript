@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Gilroy", "sans-serif";
+            color: #f9f6f6;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: #111;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background-color: yellow;
+            width: 15vw;
+            height: 15vw;
+            cursor: pointer;
+            transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+
+
+
+
+    <script>
+        let box = document.querySelector(".box")
+        box.addEventListener("mouseover", () => {
+            box.style.backgroundColor = "green";
+            box.style.borderRadius = "15px"
+
+        })
+        box.addEventListener("mouseout", () => {
+            box.style.backgroundColor = "red";
+            box.style.borderRadius = "0"
+
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyUP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Gilroy", "sans-serif";
+            color: #f9f6f6;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: #111;
+            display: grid;
+            place-items: center;
+        }
+
+        h2 {
+            font-size: 18rem;
+            color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>5</h2>
+
+    <script>
+        let h2 = document.querySelector("h2");
+        window.addEventListener("keyup", (e) => {
+            console.log(e.key);
+
+         if(e.key === " "){
+            h2.textContent = "space"
+         }else{
+               h2.textContent = e.key;
+         }
+
+        })
+
+    </script>
+</body>
+
+</html>

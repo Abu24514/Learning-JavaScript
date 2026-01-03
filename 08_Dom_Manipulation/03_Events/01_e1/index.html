@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Example</title>
+</head>
+
+<body>
+
+  <label>Name:</label>
+  <input type="text" placeholder="Enter name">
+
+  <p>Typed Text: <span id="output"></span></p>
+  <p>Length: <span id="count">0</span></p>
+
+  <script>
+    let inp = document.querySelector("input");
+    let output = document.getElementById("output");
+    let count = document.getElementById("count");
+
+    inp.addEventListener("input", function (e) {
+      let value = inp.value.trim(); // extra spaces remove
+
+      output.innerText = value;     // show text
+      count.innerText = value.length; // show length
+    });
+  </script>
+
+</body>
+</html>
