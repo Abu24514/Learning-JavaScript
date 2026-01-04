@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy", "sans-serif";
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    background-color: #222;
+    color: #fff;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem 1rem;
+
+}
+
+#main-con-info {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.contact-info {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    width: 18rem;
+    height: 18rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    margin: 3rem 1rem
+        /* margin-top: 1rem;
+    margin-bottom: 1rem; */
+}
+
+h2 {
+    color: black;
+    margin-bottom: 10px;
+    font-size: 20px;
+
+}
+
+label {
+    display: block;
+    text-align: left;
+    color: #312f2f;
+}
+
+input {
+    border: 0.5px solid #ccc;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    padding: 0.2rem;
+    margin-top: 0.2rem;
+}
+
+input:focus-within {
+    outline: none;
+    border-width: 2px;
+    border-bottom-color: #5bd183;
+
+}
+
+#btn {
+    margin-top: 0.4rem;
+    border: none;
+    background-color: #75e59a;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#btn:hover {
+    background-color: #5bd183;
+    transform: scale(1.05);
+    color: #fff;
+
+}
+
+/* card wala porsion hai ye  */
+
+.card {
+    margin: 1rem 1rem;
+    border: 1px solid rgb(34, 88, 39);
+    max-width: 250px;
+    max-height: 280px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+
+
+}
+
+.card h5 {
+    font-size: 1.2rem;
+    margin-top: 6px;
+    color: rgb(79, 139, 217);
+}
+
+.card p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    padding: 0 8px;
+}
+
+.profile {
+    height: 80px;
+    width: 80px;
+    /* background-color: red; */
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.dlt-Btn{
+    padding: 0.1rem 0.2rem;
+    margin-top: 0.6rem;
+    border: none;
+    background-color: #d86827;
+    width: 80%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.dlt-Btn:hover{
+ background-color:  #d22f2f;
+    transform: scale(1.05);
+    color: #fff;
+
+}
+
+
+@media (max-width: 600px) {
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+      #main-con-info {
+        width: 80%; 
+    }
+
+    .card {
+        width: 60%; 
+        max-width: none; 
+    }
+    
+}
+
+
