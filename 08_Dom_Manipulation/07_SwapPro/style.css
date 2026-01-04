@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+img {
+  width: 400px;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow:  0 0 10px 0px rgb(251, 253, 253) ;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: cyan;
+  border: none;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  
+}
+
+button:active {
+  scale: 0.95;
+}
