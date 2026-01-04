@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM and Select Elements</title>
+
+    <style>
+        .box {
+            padding: 10px;
+            background-color: lightgray;
+            margin-top: 10px;
+        }
+
+        .active {
+            color: white;
+            background-color: green;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Hello World</h1>
+    <p>This is a paragraph</p>
+
+    <div class="box">I am a box</div>
+    <button id="btn">Click</button>
+
+    <script>
+        /*
+        ==========================================================
+        📘 DOM Introduction
+        ==========================================================
+  
+        DOM = Document Object Model
+  
+        The DOM represents the HTML page as a tree of objects.
+        JavaScript uses DOM to interact with the webpage.
+  
+        Without DOM:
+        - JS cannot change HTML
+        - JS cannot change CSS
+        - JS cannot handle user actions
+        ==========================================================
+        */
+
+        /*
+        ==========================================================
+        📘 Selecting Elements from DOM
+        ==========================================================
+        */
+
+        // Select by ID
+        let title = document.getElementById("title");
+
+        // Select by class
+        let items = document.getElementsByClassName("box");
+
+        // Select by tag
+        let paragraphs = document.getElementsByTagName("p");
+
+        // Modern selectors
+        let box = document.querySelector(".box");
+        let button = document.querySelector("button");
+
+        console.log(title);
+        console.log(items);
+        console.log(paragraphs);
+        console.log(box);
+        console.log(button);
+
+        /*
+        ==========================================================
+        📘 Changing Text Content
+        ==========================================================
+        */
+
+        title.innerText = "Hello JavaScript DOM";
+
+        /*
+        ==========================================================
+        📘 Changing Style using JavaScript
+        ==========================================================
+        */
+
+        box.style.color = "blue";
+
+        /*
+        ==========================================================
+        📘 Using classList
+        ==========================================================
+        */
+
+        title.classList.add("active");
+        /*
+         ==========================================================
+         📘  Changing Text Content for button
+         ==========================================================
+         */
+        button.textContent = " submit by js"
+
+
+    </script>
+</body>
+
+</html>
