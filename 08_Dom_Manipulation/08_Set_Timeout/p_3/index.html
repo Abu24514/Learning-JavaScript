@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    
+      }
+      .hide {
+        margin-top: 40px;
+        width: 670px;
+        padding: 15px 50px;
+        height: 100px;
+        background: #f0f0f1;
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hide">
+      <h1>Hii how are you , I think you are good 👍</h1>
+    </div>
+    <script>
+        let hide = document.querySelector(".hide");
+        setTimeout(() => {
+        hide.style.display ="none"
+           
+        }, 3000);
+    </script>
+  </body>
+</html>
