@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+    🔹 setInterval
+    
+    It runs code again and again, after fixed time gap.
+    
+    ➡️ Syntax: setInterval(function, time_in_ms);
+    
+    */
+
+        // setInterval(function() {
+        //   console.log("I repeat every 1 second");
+        // }, 1000); // 1000 ms = 1 second
+
+        // < ------ My code ------->
+        let num = 10;
+        let Intrval = setInterval(function () {
+            if (num >= 0) {
+                console.log(num);
+                num--;
+            } else {
+                clearInterval(Intrval);
+            }
+        }, 1000);
+
+    </script>
+</body>
+
+</html>
