@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Style -->
+     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        .main{
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            color: #fff;
+            padding: 4rem;
+        }
+        ul li{
+            list-style: none;
+        }
+        .lt{
+            text-decoration: line-through;
+            color: red;
+        }
+        
+     </style>
+</head>
+<body>
+    <div class="main">
+        <ul>
+            <li>Apple</li>
+            <li>Mango</li>
+            <li>Grapes</li>
+            <li>Orange</li>
+            <li>Pineapple</li>
+        </ul>
+    </div>
+    <!-- script -->
+     <script>
+        let ul= document.querySelector("ul");
+        ul.addEventListener("click" ,(evt)=>{
+        evt.target.classList.toggle("lt")
+            
+        })
+        
+     </script>
+</body>
+</html>
