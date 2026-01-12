@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise Chaining</title>
+  </head>
+  <body>
+    <script>
+      //  Promise chaining means executing multiple asynchronous operations one after another, where each .then() runs only after the previous promise is resolved, and the result of one .then() is passed to the next one.
+      let ans = new Promise((resolve) => {
+        return resolve("sabse pahle ghar par jao");
+      });
+
+      let p2 = ans.then(function (data) {
+        console.log(data);
+        return new Promise(function (resolve) {
+          return resolve("gate kholo aur laga do");
+        });
+      });
+
+      let p3 = p2.then(function (data) {
+        console.log(data);
+        return new Promise(function (resolve) {
+          return resolve("khana pakao aur khana khao");
+        });
+      });
+      let p4 = p3.then(function (data) {
+        console.log(data);
+        return new Promise(function (resolve) {
+          return resolve("ab show jao ");
+        });
+      });
+      p4.then((data) => {
+        console.log(data);
+      });
+    </script>
+  </body>
+</html>
